@@ -9,7 +9,7 @@
 Background
 
 👨🏼‍💻 Co-Founder & CTO        @ [Cactus AI](https://www.trycactus.com/)  
-👨🏼‍💻 Senior Software Eng.    @ [Seaplane IO - Sequoia](https://www.crunchbase.com/organization/seaplane-io)  
+👨🏼‍💻 Senior Software Eng.    @ [Seaplane AI - Sequoia](https://www.crunchbase.com/organization/seaplane-io)  
 👨🏼‍💻 Founding Eng.           @ [Sparta Commodities](https://www.spartacommodities.com/)  
 👨🏼‍💻 Senior Software Eng.    @ [IBM Research](https://research.ibm.com/)  
 👨🏼‍💻 Senior Software Eng.    @ Karumi <3  
