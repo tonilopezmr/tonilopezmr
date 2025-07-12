@@ -65,21 +65,14 @@ export default function About() {
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
-                I’ve loved making things for as long as I can remember. 
-                I built many different projects since I was an 8-year-old kid, 
-                from selling flowers to making my own firecrackers. 
-                I've learned the ropes to make things happen. 
-                When I was 13 years old, my parents gifted me my first PC.
+              Basketball was my first passion, I played at a semi-professional level while also becoming a pro Counter-Strike player. Around the same time, I discovered programming, and everything shifted.
+              </p>
+              <p> 
+              A Dev conference in Madrid was a turning point: top-tier developers, all speaking English and using MacBooks. I sold everything to buy one and never looked back.
               </p>
               <p>
-                Growing up, basketball was my biggest passion besides computers. At 14, I discovered Counter-Strike Source and eventually became a professional player. But everything changed when I found programming. Attending the DroidCon Android Community Meetup in Madrid opened my eyes - I met incredible developers and learned invaluable lessons about software development that would shape my career.
-              </p>
-              <p>
-                After attending DroidCon, I noticed two main things: everyone spoke English and used MacBooks. I sold everything and bought my first MacBook Pro 15". No more Android Studio getting stuck when having more than 6 projects open at the same time.
-              </p>
-              <p>
-                After more than 10 years, I've created <Link href="/projects" className="text-teal-500 dark:text-[#FEDE00]/100">many personal projects</Link> and worked for many different companies. I've grown to a level I wouldn't have expected, being able to code in almost any language and use any platform from web to mobile, and any service.
-              </p>
+              Since then, I’ve spent over 10 years building <Link href="/projects" className="text-teal-500 dark:text-[#FEDE00]/100">many personal projects</Link>, working at different companies, and picking up whatever tech stack I needed from mobile, web, distributed systems,AI and beyond.
+              </p>              
             </div>
           </div>
           <div className="lg:pl-20">
