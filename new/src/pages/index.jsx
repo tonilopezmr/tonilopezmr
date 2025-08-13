@@ -311,22 +311,7 @@ export default function Home({ articles }) {
             />
           </div>
         </div>
-      </Container>      
-      <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl gap-y-20 lg:max-w-none">
-          <div className="grid grid-cols-2 gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}          
-          </div>
-          <div className="flex justify-center">
-            <Link href="/articles" className="group w-full flex items-center max-w-lg justify-center gap-2 rounded-md bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 hover:bg-zinc-100 dark:bg-zinc-800/50 dark:text-[#FEDE00]/100 text-center">
-              Read all articles
-              <ArrowDownIcon className="h-4 w-4 transition dark:text-[#FEDE00]/100" />
-            </Link>
-          </div>          
-        </div>
-      </Container>
+      </Container>            
     </>
   )
 }
