@@ -31,6 +31,7 @@ import stackai from '@/images/logos/stack-white.png'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
+import { Avatar, AvatarContainer } from '@/components/Header'
 
 function MailIcon(props) {
   return (
@@ -284,6 +285,18 @@ export default function Home({ articles }) {
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
+          <AvatarContainer
+                    className="absolute left-0 top-3 origin-left transition-opacity"
+                    style={{
+                      opacity: 'var(--avatar-border-opacity, 0)',
+                      transform: 'var(--avatar-border-transform)',
+                    }}
+                  />
+              <Avatar
+                    large
+                    className="block h-16 w-16 origin-left"
+                    style={{ transform: 'var(--avatar-image-transform)' }}
+                  />
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Product, Maker and Software engineer.
           </h1>

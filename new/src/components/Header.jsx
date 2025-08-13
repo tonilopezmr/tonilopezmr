@@ -211,7 +211,7 @@ function clamp(number, a, b) {
   return Math.min(Math.max(number, min), max)
 }
 
-function AvatarContainer({ className, ...props }) {
+export function AvatarContainer({ className, ...props }) {
   return (
     <div
       className={clsx(
@@ -223,7 +223,7 @@ function AvatarContainer({ className, ...props }) {
   )
 }
 
-function Avatar({ large = false, className, ...props }) {
+export function Avatar({ large = false, className, ...props }) {
   return (
     <Link
       href="/"
@@ -237,7 +237,7 @@ function Avatar({ large = false, className, ...props }) {
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
-          large ? 'h-16 w-16' : 'h-9 w-9'
+          large ? 'h-14 w-14' : 'h-9 w-9'
         )}
         priority
       />
@@ -356,39 +356,7 @@ export function Header() {
           height: 'var(--header-height)',
           marginBottom: 'var(--header-mb)',
         }}
-      >
-        {isHomePage && (
-          <>
-            <div
-              ref={avatarRef}
-              className="order-last mt-[calc(theme(spacing.16)-theme(spacing.3))]"
-            />
-            <Container
-              className="top-0 order-last -mb-3 pt-3"
-              style={{ position: 'var(--header-position)' }}
-            >
-              <div
-                className="top-[var(--avatar-top,theme(spacing.3))] w-full"
-                style={{ position: 'var(--header-inner-position)' }}
-              >
-                <div className="relative">
-                  <AvatarContainer
-                    className="absolute left-0 top-3 origin-left transition-opacity"
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
-                  <Avatar
-                    large
-                    className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-                </div>
-              </div>
-            </Container>
-          </>
-        )}
+      >        
         <div
           ref={headerRef}
           className="top-0 z-10 h-16 pt-6"
