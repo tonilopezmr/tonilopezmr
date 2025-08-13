@@ -71,7 +71,7 @@ export default function About() {
               A Dev conference in Madrid was a turning point: top-tier developers, all speaking English and using MacBooks. I sold everything to buy one and never looked back.
               </p>
               <p>
-              Since then, I’ve spent over 10 years building <Link href="/projects" className="text-teal-500 dark:text-[#FEDE00]/100">personal projects</Link>, working at different companies, and picking up whatever tech stack I needed from mobile, web, distributed systems,AI and beyond.
+              Since then, I’ve spent over {new Date().getFullYear() - 2013} years building <Link href="/projects" className="text-teal-500 dark:text-[#FEDE00]/100">personal projects</Link>, working at different companies, and picking up whatever tech stack I needed from mobile, web, distributed systems,AI and beyond.
               </p>              
             </div>
           </div>
