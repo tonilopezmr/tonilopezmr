@@ -63,7 +63,7 @@ export default function About() {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               👋 I’m Toni López
             </h1>
-            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
+            <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-300">
               <p>
               Basketball was my first passion, I played at a semi-professional level while also becoming a pro Counter-Strike player. Around the same time, I discovered programming, and everything shifted.
               </p>

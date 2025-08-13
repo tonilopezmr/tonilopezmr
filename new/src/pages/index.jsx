@@ -125,7 +125,7 @@ function Newsletter() {
         <MailIcon className="h-6 w-6 flex-none" />
         <span className="ml-3">Stay up to date</span>
       </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
         Get notified when I publish something new, and unsubscribe at any time.
       </p>
       <div className="mt-6 flex">
@@ -218,7 +218,7 @@ function Resume() {
                 {role.company}
               </dd>
               <dt className="sr-only">Role</dt>
-              <dd className="text-xs text-zinc-500 dark:text-zinc-400">
+              <dd className="text-xs text-zinc-500 dark:text-zinc-300">
                 {role.title}
               </dd>
               <dt className="sr-only">Date</dt>
@@ -282,46 +282,41 @@ export default function Home({ articles }) {
           name="description"
           content="I’m Toni, a software designer and product maker based in San Francisco 🌁, originally from Valencia ☀️. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
         />
-      </Head>
+      </Head>      
       <Container className="mt-9">
-        <div className="max-w-2xl">
-          <AvatarContainer
-                    className="absolute left-0 top-3 origin-left transition-opacity"
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)',
-                    }}
-                  />
-              <Avatar
-                    large
-                    className="block h-16 w-16 origin-left"
-                    style={{ transform: 'var(--avatar-image-transform)' }}
-                  />
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Product, Maker and Software engineer.
-          </h1>
-          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I'm Toni, night hacker and entrepreneur by surprise based in San Francisco 🌁, originally from Valencia ☀️. I'm a product builder with a passion for creating awesome solutions from real problems, I only press keys for solving real problems.
-            {/* I’m the founder and CTO of Cactus, where we develop
-            technologies that empower regular people to explore space on their
-            own terms. */}
-          </p>
-          <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com/tonilopezmr"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />            
-            <SocialLink
-              href="https://github.com/tonilopezmr"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com/in/tonilopezmr"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+        <div className='max-w-2xl lg:max-w-5xl mt-16 sm:mt-32 mx-auto'>        
+          <div className="max-w-2xl">          
+                <Avatar
+                      large
+                      className="block h-16 w-16 origin-left"
+                      style={{ transform: 'var(--avatar-image-transform)' }}
+                    />
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+              Product, Maker and Software engineer.
+            </h1>
+            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-300">
+              I'm Toni, night hacker and entrepreneur by surprise based in San Francisco 🌁, originally from Valencia ☀️. I'm a product builder with a passion for creating awesome solutions from real problems, I only press keys for solving real problems.
+              {/* I’m the founder and CTO of Cactus, where we develop
+              technologies that empower regular people to explore space on their
+              own terms. */}
+            </p>
+            <div className="mt-6 flex gap-6">
+              <SocialLink
+                href="https://twitter.com/tonilopezmr"
+                aria-label="Follow on Twitter"
+                icon={TwitterIcon}
+              />            
+              <SocialLink
+                href="https://github.com/tonilopezmr"
+                aria-label="Follow on GitHub"
+                icon={GitHubIcon}
+              />
+              <SocialLink
+                href="https://linkedin.com/in/tonilopezmr"
+                aria-label="Follow on LinkedIn"
+                icon={LinkedInIcon}
+              />
+            </div>
           </div>
         </div>
       </Container>            
