@@ -67,7 +67,7 @@ export default function App({ Component, pageProps, router }) {
         </main>
         {router.pathname !== '/' && <Footer />}
       </div>
-      <div className="custom-cursor dark:text-white" id="cursor" style={{ left: '753px', top: '610px', position: 'absolute', display: 'none' }}>focus</div>              
+      <div className="custom-cursor dark:text-white" id="cursor" style={{ left: '753px', top: '610px', position: 'absolute', display: 'none', pointerEvents: 'none' }}>focus</div>              
     </>
   )
 }
