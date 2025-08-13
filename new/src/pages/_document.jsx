@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { useEffect } from 'react';
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -51,9 +52,9 @@ export default function Document() {
           href={`${process.env.NEXT_PUBLIC_SITE_URL}/rss/feed.json`}
         />
       </Head>
-      <body className="flex h-full flex-col bg-zinc-30 dark:bg-zinc-900">
+      <body className="flex h-full flex-col bg-zinc-30 dark:bg-zinc-900">        
         <Main />
-        <NextScript />
+        <NextScript />                
       </body>
     </Html>
   )

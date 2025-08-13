@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
@@ -18,6 +18,40 @@ function usePrevious(value) {
 
 export default function App({ Component, pageProps, router }) {
   let previousPathname = usePrevious(router.pathname)
+  const [isFocus, setFocus] = useState(false)
+
+  useEffect(() => {
+    const cursor = document.querySelector('.custom-cursor')
+    if (!cursor) {
+      return
+    }
+  
+    const move = e => {      
+      cursor.style.left = `${e.clientX}px`
+      cursor.style.top = `${e.clientY}px`      
+    }
+  
+    const onClick = (e) => {    
+      setFocus(!isFocus)      
+
+      if(isFocus) {                
+        move(e)
+        cursor.style.display = 'none'
+        document.body.style.cursor = ''        
+      } else {
+        cursor.style.display = ''
+        document.body.style.cursor = 'none'
+      }
+    }
+  
+    document.addEventListener('mousemove', move)
+    document.addEventListener('mousedown', onClick)    
+  
+    return () => {
+      document.removeEventListener('mousemove', move)
+      document.removeEventListener('mousedown', onClick)      
+    }
+  }, [isFocus])
 
   return (
     <>
@@ -33,6 +67,7 @@ export default function App({ Component, pageProps, router }) {
         </main>
         {router.pathname !== '/' && <Footer />}
       </div>
+      <div className="custom-cursor dark:text-white" id="cursor" style={{ left: '753px', top: '610px', position: 'absolute', display: 'none' }}>focus</div>              
     </>
   )
 }
