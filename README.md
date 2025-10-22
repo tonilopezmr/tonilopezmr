@@ -1,6 +1,6 @@
 ### Hi, I'm Toni 👋
 
-🏗️ Co-Founder. @ [Karumi (YC F25)](https://karumi.ai)  
+🏗️ Building @ [Karumi (YC F25)](https://karumi.ai)  
 
 👨🏼‍💼 [LinkedIn](https://www.linkedin.com/in/tonilopezmr)  
 💬 [Twitter](https://github.com/tonilopezmr)   
