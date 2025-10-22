@@ -1,6 +1,6 @@
 ### Hi, I'm Toni 👋
 
-🏗️ Founding Eng. @ [Stack AI (YC W23)](https://stack-ai.com/)  
+🏗️ Co-Founder. @ [Karumi (YC F25)](https://karumi.ai)  
 
 👨🏼‍💼 [LinkedIn](https://www.linkedin.com/in/tonilopezmr)  
 💬 [Twitter](https://github.com/tonilopezmr)   
@@ -8,6 +8,7 @@
 
 Background
 
+👨🏼‍💻 Founding Eng. @ [Stack AI (YC W23)](https://stack-ai.com/)  
 👨🏼‍💻 Co-Founder & CTO        @ [Cactus AI](https://www.trycactus.com/)  
 👨🏼‍💻 Senior Software Eng.    @ [Seaplane AI - Sequoia](https://www.crunchbase.com/organization/seaplane-io)  
 👨🏼‍💻 Founding Eng.           @ [Sparta Commodities](https://www.spartacommodities.com/)  
