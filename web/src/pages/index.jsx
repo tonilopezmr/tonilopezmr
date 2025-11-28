@@ -301,7 +301,7 @@ export default function Home({ articles }) {
               own terms. */}
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-300">
-              I'm a product builder with a passion for creating awesome solutions from real problems, I only press keys for solving real problems.
+              I'm a product builder with a passion for creating awesome solutions from real problems, I only write code when it directly solves something that matters.
             </p>
             <div className="mt-6 flex gap-6">
               <SocialLink
