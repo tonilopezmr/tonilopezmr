@@ -3,7 +3,7 @@
 🏗️ Building @ [Karumi (YC F25)](https://karumi.ai)  
 
 👨🏼‍💼 [LinkedIn](https://www.linkedin.com/in/tonilopezmr)  
-💬 [Twitter](https://github.com/tonilopezmr)   
+💬 [Twitter](https://x.com/tonilopezmr)   
 🖥️ [tonilopezmr.com](https://www.tonilopezmr.com/)
 
 Background
