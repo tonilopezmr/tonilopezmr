@@ -1,0 +1,90 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import theSocialNetwork from './assets/the_social_network_movie_image_andrew_garfield_01.jpg'
+import facemashMovie from './assets/facemash_movie.jpg'
+import facemashUPV from './assets/facemash-image.png'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2015-11-07',
+  title: 'FACEMASH UPV',
+  cover: theSocialNetwork,
+  description:
+    'Facemash website for UPV University.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+> I just published it and I know not everyone will like it but it's not illegal, it's the university's fault that everyone can see it.
+
+I obtained all the profile images from UPV since its foundation and created [Facemash UPV](https://bacota.com/facemash).
+
+## Why?
+
+Since I'm in my **second year of computer science**, <del>[and I wanted to promote the Grade Calculator app](https://bacota.com/calculanotas)</del>, I thought it would be fun to pay a small tribute to my friend [Mark][1] who did the same thing but with stolen images from private profiles, **I didn't do that, I'll explain later**.
+
+I wanted to make it as similar as possible to the one from [The Social Network][2] movie that they show so much during the welcome days:
+
+<Image src={facemashMovie} />
+
+vs
+
+<Image src={facemashUPV} />
+
+## How?
+
+Well, it was **very easy**. I knew you could see all the university photos in my **first year** when I entered, but it was in this second year when I found a use for it.
+
+Well, if you want a summary of **how I did it**, here you can see the fun version:
+
+[![](http://img.youtube.com/vi/f8AuB5hPiCk/0.jpg)](https://www.youtube.com/watch?v=f8AuB5hPiCk)
+
+Now **seriously**, you take your profile picture and notice that the URL is [http://intranet.upv...../numbers.gif][3] and you keep changing the numbers and **EUREKA!**, __anyone can see the images in UPV__ and **it's not a problem** because you can see your classmates' photos in the intranet (class photos) etc.
+
+Now we just need to **automate it** and create an HTML page that changes the URLs. To make it as simple as possible and make the page very fast at loading photos since we only need to change the numbers, I **developed** a program that increases the numbers and saves them in a **file**, so I don't have to find an image every time I want to change it, etc.
+
+The problem is that the number is veeeery **large** and in most combinations **there is no image** and you get an ugly gray one :(.
+**Problem solved**, when it doesn't find a profile image, it shows an image that is always the same and even smaller, so it always weighs the same (bytes), specifically **5372 bytes**. Any images that were different from the faceless image, I just don't add them to the file and that's it.
+
+So I left it running for a while and when I had **<del>9840</del>14185 different numbers** I stopped because otherwise there are too many faces and people can't find themselves!
+
+The HTML with a bit of javascript so the client does all the work and it displays without loading, very fast.
+
+Here's the magic code:
+
+~~~ java
+    // Code for collect facebooks in a file
+    public static void main(String[] args) throws IOException {
+        int cont = 0;
+
+        for(int i=53177199; i < 99999999; i += 100) {
+            PrintWriter printWriter = new PrintWriter(new FileOutputStream("faces", true));
+            String urlPath = "https://intranet.upv.es/foto/get/" + i + ".gif";
+
+            URL url = new URL(urlPath);
+
+            InputStream is = url.openConnection().getInputStream();
+
+            byte[] buffer = new byte[8192];
+            int bytesRead;
+            ByteArrayOutputStream output = new ByteArrayOutputStream();
+            while ((bytesRead = is.read(buffer)) != -1)
+            {
+                output.write(buffer, 0, bytesRead);
+            }
+
+            if (output.toByteArray().length != 5372){
+                printWriter.write(i + "abc");
+                printWriter.close();
+                System.out.println(cont++ + " id: "+i);
+            }
+        }
+
+~~~
+
+> Don't press the word OR
+
+
+[1]: https://en.wikipedia.org/wiki/Mark_Zuckerberg
+[2]: http://www.filmaffinity.com/en/film577699.html
+[3]: https://intranet.upv.es/foto/get/52873099.gif
