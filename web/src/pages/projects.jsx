@@ -22,7 +22,7 @@ const projects = [
     description:
       'Agentic demo platform that closes leads when intent is highest. Delivers hyper-personalized product demos 24/7 through live video calls with AI agents, in any language, with automatic CRM integration.',
     link: { href: 'https://karumi.ai/', label: 'karumi.ai' },
-    logo: { l: karumi, shape: "rounded-full"},
+    logo: { l: karumi, shape: "rounded-full", className: "dark:invert p-1"},
   },
   /*{
     name: 'Bodia AI Studio',
