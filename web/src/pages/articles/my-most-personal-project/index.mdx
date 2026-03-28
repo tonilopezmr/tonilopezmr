@@ -1,0 +1,131 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2025-05-13', 
+  title: 'Bacota - My Most Personal Project',
+  description:
+    'A retrospective on building Bacota my most personal project.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+import Image from 'next/image'
+import old_bacota from '@/images/logos/old_bacota.jpeg'
+import bacota from '@/images/logos/bacota.png'
+
+<div className="mt-6 mx-16">
+  <div className="flex justify-between items-center">
+    <div className="flex-1">
+      <Image
+        src={old_bacota}
+        alt="Old Bacota Hardware"
+        className="rounded-lg"
+        width={96}
+        height={96}
+      />
+    </div>
+    <div className="flex-none px-8">
+      <div className="text-2xl">→</div>
+    </div>
+    <div className="flex-1 flex justify-end">
+      <Image 
+        src={bacota} 
+        alt="Bacota Logo"
+        width={76}
+        height={76}
+      />
+    </div>
+  </div>
+  <div className="flex justify-between mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+    <div>1999-2018</div>
+    <div>2018-2021</div>
+  </div>
+</div>
+
+## Long Story Short
+
+My journey into hardware started with IoT home automation. Frustrated with existing smart home solutions, I began building my own devices, starting with simple fan and light controls.
+
+[Bacota](https://bacota.com) was born.
+
+When hardware miniaturization proved challenging, I pivoted to vertical garden irrigation systems. I built sensors and dashboards to help installers identify dry spots and maintenance issues remotely. The project grew complex with multiple components as I explored the technical possibilities.
+
+However, I made the mistake of building without customer feedback. When a friend needed improved software for garage door hardware from China, I realized I wasn't equipped for hardware manufacturing at scale.
+
+This led to my final approach - modifying existing Chinese hardware with custom firmware. This leveraged my software strengths while applying everything I'd learned about hardware. It was the perfect balance of practicality and innovation.
+
+import clsx from 'clsx'
+import image1 from '@/images/photos/bacota/bacota1.jpg'
+import image2 from '@/images/photos/bacota/bacota2.jpg'
+import image3 from '@/images/photos/bacota/bacota3.jpg'
+import image4 from '@/images/photos/bacota/bacota4.jpg'
+
+<div className="mt-16 sm:mt-20 overflow-x-auto">
+  {/* Mobile layout (below md) */}
+  <div className="grid grid-cols-2 gap-4">
+    {[image1, image2, image3, image4].map((image, imageIndex) => (
+      <div
+        key={imageIndex}
+        className={clsx(
+          'relative aspect-[9/10] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800',
+          ['rotate-2', '-rotate-2', 'rotate-2', '-rotate-2'][imageIndex]
+        )}
+      >
+        <Image
+          src={image}
+          alt=""
+          sizes="11rem"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
+## Why I Built This
+
+This project was deeply personal. After losing a friend who worked in electronics, **someone important to me, told me I could never work with electronics without going to university**. Her dismissive comment sparked my determination to _prove her wrong_.
+
+I started learning Arduino development to honor my friend's memory. What began as defiance became a journey of discovery, where I found magic in combining software and hardware to create something meaningful ✨
+
+## Learnings
+
+1. > Looking back, I realize I didn't truly tried to the Bacota company - my focus was entirely on learning and proving myself. I neglected crucial business aspects like customer development, seeking funding, or building a team. My passion for mastering electronics overshadowed the practical steps needed for a successful hardware startup.
+
+2. I thought I had wasted over €10,000 trying to build a company. But the truth is, I was **investing in myself**, proving that **I could do it**.
+
+  2.1 I learned 3D modeling, PCB design, electronics, low level firmware development, and communication protocols.
+
+3. **I discovered I'm capable of anything I set my mind to** - from building electronic devices from scratch and understanding the physics behind them, to developing full-stack software solutions, hacking hardware bypasing my firmware, creating 3D objects and more.
+
+4. I did everything myself, I didn't try to build a team or delegate anything - it was all ego-driven.
+
+5. All this journey was about my EGO and me.
+
+6. Work-life balance is crucial for the long term, burnout is real. **For 4 years, I juggled this project alongside a full-time job, sacrificing nearly every weekend**, working late nights, and getting minimal sleep. Looking back, I should have taken more time to rest and recharge.
+
+7. Don't dismiss companies making seemingly poor features or products, there's likely a good reason. Being both a hardware and software company is incredibly challenging, even more if you are going solo.
+
+8. I mistakenly believed I could handle large projects better on my own.
+
+import finalImage from '@/images/photos/bacota/final_bacota.png'
+
+<div className="mt-16 sm:mt-20">
+  <figure>
+    <div className="aspect-[2/1] w-full overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800">
+      <Image
+        src={finalImage}
+        alt="Endless hours late night in the office"
+        className="h-full w-full object-cover"
+        sizes="(min-width: 1024px) 100vw, 100vw"
+        priority
+      />
+    </div>
+    <figcaption className="mt-2 text-sm text-zinc-600 dark:text-zinc-300">
+      Endless hours late night in the office
+    </figcaption>
+  </figure>
+</div>

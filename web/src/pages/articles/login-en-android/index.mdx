@@ -1,11 +1,16 @@
----
-layout: post
-title:  "Una forma de implementar Login en Android"
-date:   2016-02-03 10:36:25
-categories: android
-tags: android login
-image: /assets/article_images/2016-02-03-login-con-android/login_background.jpg
----
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+//import theSocialNetwork from './assets/the_social_network_movie_image_andrew_garfield_01.jpg'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2016-02-03',
+  title: 'Una forma de implementar Login en Android',  
+  description:
+    'Explicaión de cómo implementar Login en Android.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
 
 Ahora que estoy implementando el Login en [Calcula Notas][4], voy a explicar cómo lo hago de forma que sea fácil de implementar en otras aplicaciones futuras, **no es una librería** pero sí una forma de hacerlo para que *“funcione solo”* más o menos.
 

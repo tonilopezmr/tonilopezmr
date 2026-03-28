@@ -1,11 +1,15 @@
----
-layout: post
-title:  "¡Qué fácil desplegar con Heroku y Spark!"
-date:   2016-02-07 19:19:25
-categories: cloud
-tags: heroku java
-image: /assets/article_images/2016-02-07-que-facil-desplegar-con-heroku-spark/heroku-inc.jpg
----
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2016-02-07',
+  title: '¡Qué fácil desplegar con Heroku y Spark!',
+  description:
+    'Explicación de cómo desplegar Spartk usando Heroku.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
 
 Antes de leer el post, si no conoces los siguientes productos consultarlos antes:
 
@@ -46,8 +50,9 @@ Si sigues el tutorial paso a paso, todo debería ir bien, **PERO** de todas form
 
 Al instalar [Heroku][7] y [Maven][16] me daba fallo de que no encontraba el jdk de java8, así que puse lo siguiente:
 
-
-	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_{mi-version-java}.jdk/Contents/Home
+```shell
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_{mi-version-java}.jdk/Contents/Home
+```
 
 ### Procfile y MVN files
 

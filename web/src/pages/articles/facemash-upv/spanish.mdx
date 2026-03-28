@@ -1,26 +1,35 @@
----
-layout: post
-title:  "FACEMASH UPV"
-date:   2015-11-07 13:40:25
-categories: personal
-tags: facemash-upv
-image: http://cdn.collider.com/wp-content/uploads/the_social_network_movie_image_andrew_garfield_01.jpg
----
+import { ArticleLayout } from '@/components/ArticleLayout'
+import Image from 'next/image'
+import theSocialNetwork from './assets/the_social_network_movie_image_andrew_garfield_01.jpg'
+import facemashMovie from './assets/facemash_movie.jpg'
+import facemashUPV from './assets/facemash-image.png'
+
+export const meta = {
+  author: 'Toni López',
+  date: '2015-11-07',
+  title: 'FACEMASH UPV',
+  cover: theSocialNetwork,
+  description:
+    'Facemash website for UPV University.',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
 
 > Lo acabo de publicar y se que no a todo el mundo le sentará bien pero no es ilegal, es culpa de la uni que todo el mundo lo pueda ver.
 
+He obtenido tódas las imagenes de perfiles de la UPV desde su fundación y he creado [Facemash UPV](https://bacota.com/facemash).
 
 ## ¿Por qué?
 
-- <del>Porque puedo</del>.
-
-Ya que estoy en **segundo curso de informática**, <del>y quería promocionar la aplicación de Calcula Notas</del> , me pareció divertido hacerle un pequeño homenaje al colega [Mark][1] que hizo lo mismo pero con imágenes robadas de perfiles privados, **yo no hice eso luego lo explicare**.
+Ya que estoy en **segundo curso de informática**, <del>[y quería promocionar la aplicación de Calcula Notas](https://bacota.com/calculanotas)</del> , me pareció divertido hacerle un pequeño homenaje al colega [Mark][1] que hizo lo mismo pero con imágenes robadas de perfiles privados, **yo no hice eso luego lo explicare**.
 
 Quería hacerlo lo más parecido al de la peli de [La red social][2] que tanto ponen en las jornadas de acogida:
 
-![La red social](http://mashupdate.com/wp-content/uploads/2015/10/facemash-700x299-1.jpg)
+<Image src={facemashMovie} />
 
-[![FACEMASH UPV](/assets/article_images/about/facemash-image.png)](https://bacota.com/facemash)
+vs
+
+<Image src={facemashUPV} />
 
 ## ¿Como?
 
