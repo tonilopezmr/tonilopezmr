@@ -18,11 +18,11 @@ import karumi from '@/images/logos/karumi_ai.svg'
 
 const projects = [
   {
-    name: 'Karumi',
+    name: 'Karumi AI',
     description:
-      'AI agents that deliver personalized product demos, 24/7, and in any language. A real demo experience through a live, interactive video call with an AI agent.',
+      'Agentic demo platform that closes leads when intent is highest. Delivers hyper-personalized product demos 24/7 through live video calls with AI agents, in any language, with automatic CRM integration.',
     link: { href: 'https://karumi.ai/', label: 'karumi.ai' },
-    logo: { l: karumi, shape: "rounded-full"},
+    logo: { l: karumi, shape: "rounded-full", className: "dark:invert p-1"},
   },
   /*{
     name: 'Bodia AI Studio',
